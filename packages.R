@@ -1,0 +1,6 @@
+install.packages("caret", dependencies = c("Depends","Suggests"))
+install.packages(c("skimr","RANN","randomForest","fastAdaboost","gbm","xgboost","caretEnsemble","C50","earth"))
+library(caret)
+pack <- c("skimr","RANN","randomForest","fastAdaboost","gbm","xgboost","caretEnsemble","C50","earth")
+sapply(pack,'library',character.only=TRUE)
+orange <- read.csv('https://raw.githubusercontent.com/selva86/datasets/master/orange_juice_withmissing.csv')
